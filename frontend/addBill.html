@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<script>
+
+function phonetype(){
+        var customerNumber=document.getElementById("cNo").value;
+        var pattern=/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+        if(pattern.test(customerNumber)) {
+        document.getElementById("msg1").style.color="green";
+        document.getElementById("msg1").innerHTML="INPUT ACCEPTED";
+        return (true);
+        }
+        else{
+            document.getElementById("msg1").style.color="red";
+        document.getElementById("msg1").innerHTML="Please,type the valid pattern.";
+        return false;
+        }
+    }
+</script>
+</head>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ1k0t2stJoWEouk5YMZdPMO5of9piik1VTvoZlCTFMJjl7c8P&usqp=CAU) ;background-repeat: no-repeat; background-size: cover;">
+   <h1 style="color:rgba(3, 68, 6, 0.836);font-size:42px;text-align:center ;">Add New Bill</h1>
+    <h2 style="color:rgb(235, 18, 18);text-align: center; font-family: cursive;font-size: 30px;">
+        Please provide all required details to add new bill</h2>
+   <strong> 
+    <form style="text-align: center;" method="post">
+        <div id="fullpage">
+
+            <label for="bCode">Biller Code</label><br>
+            <input type="text" id="bCode" name="bCode"  required><br><br>
+
+            <label for="cNo">Consumer Number</label><br>
+            <input type="text" id="cNo" name="cNo" required  placeholder="+xx-xxxxxxxxxx" onblur="phonetype();"><br><br>
+            <span id="msg1"></span><br>
+
+            <label for="bAmount">  Bill Amount</label><br>
+            <input type="text" id="bAmount" name="bAmount" required><br><br>
+
+            <label for="ddate">Due Date</label><br>
+            <input type="date" id="ddate" name="ddate" required><br><br>
+
+            <button type='submit'>Submit</button>
+
+            <input type="reset">
+        </div>
+    </form>
+    </strong>
+</body>
+</html>
