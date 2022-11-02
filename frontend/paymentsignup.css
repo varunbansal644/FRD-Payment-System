@@ -91,3 +91,17 @@
   background: #2691d9;
 }
 
+
+.login{
+  font-size: 15px;
+  color: white;
+  font-family: 'Poppins',sans-serif;
+}
+
+.login a{
+  color: #ffffff;
+  text-decoration: none;
+}
+.login a:hover{
+  text-decoration: underline;
+}

@@ -28,39 +28,35 @@
 			   
                <div class="field space">
                   <span class="fa fa-lock"></span>
-                  <input id="pswrd_1" type="password" class="pass-key" required placeholder="Password">
+                  <input type="password" class="pass-key" required placeholder="Password">
                   <span class="show">SHOW</span>
                </div>
 			   
-			   <div class="field space">
-                  <span class="fa fa-lock"></span>
-                  <input id="pswrd_2" type="password" class="pass-key" required placeholder="Confirm Password">
-                  <span class="show">SHOW</span>
-               </div>
 			   <br>
 			   <div class="field">
-                  <input type="submit" value="SIGN UP">
+                  <input type="submit" value="SUBMIT">
                </div>
             </form>
+               <br>
+               <div class="login">
+               Already have an account?
+               <a href="paymentlogin.html">Login</a>
                
+            </div>
          </div>  
       </div>
       <script>
+        const pass_field = document.querySelector('.pass-key');
          const showBtn = document.querySelector('.show');
-		 const pswrd_1 = document.querySelector("#pswrd_1");
-         const pswrd_2 = document.querySelector("#pswrd_2");
-		 const errorText = document.querySelector(".error-text");
          showBtn.addEventListener('click', function(){
-           if(pswrd_1.value != pswrd_2.value){
-             errorText.style.display = "block";
-             errorText.classList.remove("matched");
-             errorText.textContent = "Error! Password Not Match";
-             return false;
-           }else{
-             errorText.style.display = "block";
-             errorText.classList.add("matched");
-             errorText.textContent = "Nice! Confirm Password Matched";
-             return false;
+          if(pass_field.type === "password"){
+            pass_field.type = "text";
+            showBtn.textContent = "HIDE";
+            showBtn.style.color = "#3498db";
+          }else{
+            pass_field.type = "password";
+            showBtn.textContent = "SHOW";
+            showBtn.style.color = "#222";
           }
          });
       </script>

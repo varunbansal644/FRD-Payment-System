@@ -17,8 +17,9 @@
                </div>
                <div class="field space">
                   <span class="fa fa-lock"></span>
+				  <span class="show">SHOW</span>
                   <input type="password" class="pass-key" required placeholder="Password">
-                  <span class="show">SHOW</span>
+                  
                </div>
 			   <br>
 			   <div class="field">
@@ -36,6 +37,7 @@
          </div>  
       </div>
       <script>
+	     const pass_field = document.querySelector('.pass-key');
          const showBtn = document.querySelector('.show');
          showBtn.addEventListener('click', function(){
           if(pass_field.type === "password"){
