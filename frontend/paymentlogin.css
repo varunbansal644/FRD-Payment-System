@@ -1,4 +1,3 @@
-
 *{
   margin: 0;
   padding: 0;
@@ -73,9 +72,6 @@
   cursor: pointer;
   font-family: 'Montserrat',sans-serif;
 }
-
-
-
 .field input[type="submit"]{
   background: #3498db;
   border: 1px solid #2691d9;
@@ -89,13 +85,11 @@
 .field input[type="submit"]:hover{
   background: #2691d9;
 }
-
 .signup{
   font-size: 15px;
   color: white;
   font-family: 'Poppins',sans-serif;
 }
-
 .signup a{
   color: #ffffff;
   text-decoration: none;
