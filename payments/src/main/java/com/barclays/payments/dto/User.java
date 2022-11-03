@@ -21,7 +21,7 @@ public class User {
 	private int consumerNumber;
 	private String password;
 	@Nullable
-	private String sequenceId;
+	private int sequenceId;
 	@OneToOne
 	private Role role;
 }

@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.barclays.payments.dto.Account;
+import com.barclays.payments.dto.User;
 import com.barclays.payments.repository.AccountRepository;
+import com.barclays.payments.repository.UserRepository;
+
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -17,13 +20,24 @@ public class AccountServiceImpl implements AccountService {
 	
 	@Autowired
 	private AccountRepository accountRepository;
+	@Autowired
+	private UserRepository userRepository;
+	@Autowired
+	private UserService userService;
 	
 	@Override
 	public String addNewAccount(Account account) {
 		// TODO Auto-generated method stub
 		Account act = null;
+		
 		try {
+			
 			act = accountRepository.save(account);
+			Optional<User> usr= userService.getUserById(account.getEmail());
+			User user = usr.get();
+			user.setSequenceId(act.getSequenceId());
+			userRepository.save(user);
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
