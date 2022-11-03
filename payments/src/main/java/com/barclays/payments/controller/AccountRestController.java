@@ -51,7 +51,7 @@ public class AccountRestController {
 	
 	
 	@DeleteMapping("/deleteAccount/{id}")
-	public ResponseEntity<?> deleteById(@PathVariable("id") String sequenceId)
+	public ResponseEntity<?> deleteById(@PathVariable("id") int sequenceId)
 	{
 		String result=accountService.deleteAccount(sequenceId);
 		
@@ -59,11 +59,13 @@ public class AccountRestController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Record doesn't exist");
 		}
 		else
+		{
 		return ResponseEntity.status(HttpStatus.NO_CONTENT).body("record deleted successfully");
+		}
 	}
 
 	@GetMapping("/getAccount/{id}")
-	public ResponseEntity<?> getAccountById(@PathVariable("id") String sequenceId)
+	public ResponseEntity<?> getAccountById(@PathVariable("id") int sequenceId)
 	{
 		Optional<Account> optional=accountService.getAccountById(sequenceId);
 		

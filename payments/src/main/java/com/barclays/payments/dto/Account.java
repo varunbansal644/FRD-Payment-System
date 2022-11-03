@@ -15,7 +15,7 @@ import lombok.Data;
 public class Account {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private String sequenceId;
+	private int sequenceId;
 	@Column(unique = true)
 	private int accountNumber;
 	private String name;

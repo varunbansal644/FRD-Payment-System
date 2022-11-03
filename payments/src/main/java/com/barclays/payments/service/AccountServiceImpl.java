@@ -38,7 +38,7 @@ public class AccountServiceImpl implements AccountService {
 	
 
 	@Override
-	public String deleteAccount(String sequenceId) {
+	public String deleteAccount(int sequenceId) {
 		// TODO Auto-generated method stub
 		try {
 			Optional<Account> optional = accountRepository.findById(sequenceId);
@@ -60,7 +60,7 @@ public class AccountServiceImpl implements AccountService {
 	
 
 	@Override
-	public Optional<Account> getAccountById(String sequenceId) {
+	public Optional<Account> getAccountById(int sequenceId) {
 		// TODO Auto-generated method stub
 		return accountRepository.findById(sequenceId);
 	}

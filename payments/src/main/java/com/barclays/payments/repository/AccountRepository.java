@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.barclays.payments.dto.Account;
 
 @Repository
-public interface AccountRepository extends JpaRepository<Account, String>{
+public interface AccountRepository extends JpaRepository<Account, Integer>{
 
 }
