@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+
+<h1>Past Payments</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Bill Reference no.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:45%;">Bill Reference no.</th>
+    <th style="width:30%;">Amount</th>
+    <th style="width:40%;">Date Time</th>
+    <th style="width:25%;">Debit/Credit</th>
+  </tr>
+  <tr>
+    <td>124567345</td>
+    <td>267800.00</td>
+    <td>25June2022, 01:22</td>
+    <td>Debit</td>
+  </tr>
+  <tr>
+    <td>653452349</td>
+    <td>284300.00</td>
+    <td>24June2022, 02:32</td>
+    <td>Credit</td>
+  </tr>
+  <tr>
+   <td>663421379</td>
+    <td>89300.00</td>
+    <td>23June2022, 02:42</td>
+    <td>Credit</td>
+  </tr>
+  <tr>
+   <td>463982379</td>
+    <td>232300.00</td>
+    <td>21June2022, 11:42</td>
+    <td>Debit</td>
+  </tr>
+  <tr>
+    <td>563237975</td>
+    <td>2361400.00</td>
+    <td>18June2022, 12:40</td>
+    <td>Credit</td>
+  </tr>
+  <tr>
+    <td>463325479</td>
+    <td>832900.00</td>
+    <td>15June2022, 02:23</td>
+    <td>Debit</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
