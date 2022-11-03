@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.lang.Nullable;
+
 import lombok.Data;
 
 @Data
@@ -18,6 +20,7 @@ public class User {
 	@Column(unique=true)
 	private int consumerNumber;
 	private String password;
+	@Nullable
 	private String sequenceId;
 	@OneToOne
 	private Role role;
