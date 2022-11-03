@@ -6,15 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Payments system</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="manualPayment.css">
 </head>
 
-<body>
-	<form>
-		<fieldset>
-			<legend align="center" style="border:3px solid green">Payment Details</legend>
-
-
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ1k0t2stJoWEouk5YMZdPMO5of9piik1VTvoZlCTFMJjl7c8P&usqp=CAU) ;background-repeat: no-repeat; background-size: cover;">
+	<form style="text-align: center;">
+		<h1 style="color:rgba(3, 68, 6, 0.836);font-size:42px;text-align:center ;">Payment Details</h1>
 			<p>
 				<label>
 					Bill code
@@ -29,24 +26,11 @@
 					</select>
 				</label>
 			</p>
-
-
-
-
-			<p>
-				<label>Mobile No or Electricity No: <input name="paymentMode" /></label>
+				<label>Consumer Number<br><input name="paymentMode" /></label>
 			</p>
-
-
-
-
 			<p>
-				<label>Amount: <input type="number" name="amount" /></label>
+				<label>Amount<br><input type="number" name="amount" /></label>
 			</p>
-
-
-
-
 			<p>
 				Autopay :
 				<label class="switch">
@@ -58,13 +42,9 @@
 				<input type="radio" id="autopay_no" name="autopay" value="0" />
 				<label for="autopay_no"> No</label> -->
 			</p>
-
 			<p>
 				<button type="submit">Submit</button>
 			</p>
-
-		</fieldset>
 	</form>
 </body>
-
 </html>
