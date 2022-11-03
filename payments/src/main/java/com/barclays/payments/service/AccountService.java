@@ -10,3 +10,4 @@ public interface AccountService {
 	public String deleteAccount(int sequenceId);
 	public Optional<Account> getAccountById(int sequenceId);
 }
+
