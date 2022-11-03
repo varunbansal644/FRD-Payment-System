@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Payments system</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<form>
+		<fieldset>
+			<legend align="center" style="border:3px solid green">Payment Details</legend>
+
+
+			<p>
+				<label>
+					Bill code
+					<br />
+					<select name="billCode">
+						<option>--None--</option>
+						<option>B1.</option>
+						<option>B2.</option>
+						<option>B3.</option>
+						<option>B4.</option>
+						<option>B5.</option>
+					</select>
+				</label>
+			</p>
+
+
+
+
+			<p>
+				<label>Mobile No or Electricity No: <input name="paymentMode" /></label>
+			</p>
+
+
+
+
+			<p>
+				<label>Amount: <input type="number" name="amount" /></label>
+			</p>
+
+
+
+
+			<p>
+				Autopay :
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+				<!-- <input type="radio" id="autopay_yes" name="autopay" value="1" />
+				<label for="autopay_yes"> Yes</label>
+				<input type="radio" id="autopay_no" name="autopay" value="0" />
+				<label for="autopay_no"> No</label> -->
+			</p>
+
+			<p>
+				<button type="submit">Submit</button>
+			</p>
+
+		</fieldset>
+	</form>
+</body>
+
+</html>
