@@ -18,7 +18,6 @@ public class RegisteredBiller {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int billerSequenceId;
 	private String billerCode;
-	
 	private int consumerNumber;
 	private int accountNumber;
 	private boolean autoPay; // 1 for autopay enabled 0 for disabled
