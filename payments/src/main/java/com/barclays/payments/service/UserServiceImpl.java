@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
 			throw e;
 		}
 		
-		if(user != null) {
+		if(usr != null) {
 			return "Success";
 		}
 		else {
