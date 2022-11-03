@@ -37,14 +37,14 @@ public class UserRestController {
 			result = userService.addNewUser(user);
 			Map<String, Object> map = new HashMap<>();
 			map.put("status", "success");
-			map.put("statusCode", 201+"");
+			map.put("statusCode", HttpStatus.CREATED);
 			map.put("data", user);
 			return ResponseEntity.status(HttpStatus.CREATED).body(map);
 		} catch (Exception e) {
 			// TODO: handle exception
 			Map<String, Object> map = new HashMap<>();
 			map.put("status", "failed");
-			map.put("statusCode", 500+"");
+			map.put("statusCode", HttpStatus.INTERNAL_SERVER_ERROR);
 			map.put("data", user);
 			map.put("errorMessage", e.getMessage());
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(map);
