@@ -14,7 +14,6 @@ import lombok.Data;
 @Table(name="user")
 public class User {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String loginId;
 	@Column(unique=true)
 	private int consumerNumber;
