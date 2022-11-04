@@ -4,6 +4,14 @@
 table, th, td {
   border:1px solid black;
 }
+div{
+  background-color: #ffffff;
+  border: 1px solid black;
+  font-weight: bold;
+  color: #000000;
+width: 90%;
+margin-left: 5%;
+}
 </style>
 <body>
 
@@ -12,19 +20,19 @@ table, th, td {
 h1 {text-align: center;}
 </style>
 </head>
-<body >
+<body style="background-image: url(landing.png) ;background-repeat: no-repeat; background-size: cover; ">
+  <div style="margin-top: 5%;">
+<h1 style="background-color: #fff;">Payments History</h2>
 
-<h1 >Payments History</h2>
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Bill Reference no.." title="Type in a name">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Bill Reference no.." title="Type in a name" style="margin-left: 1%;">
 <br>
 <br>
 <table id="myTable">
   <tr class="header">
     <th style="width:30%;">Bill Reference no.</th>
     <th style="width:30%;">Amount</th>
-    <th style="width:40%;">Date & Time</th>
-    <th style="width:25%;">Debit/Credit</th>
+    <th style="width:35%;">Date & Time</th>
+    <th style="width:30%;">Debit/Credit</th>
   </tr>
   <tr>
     <td>124567345</td>
@@ -63,7 +71,7 @@ h1 {text-align: center;}
     <td>Debit</td>
   </tr>
 </table>
-
+</div>
 <script>
 function myFunction() {
   var input, filter, table, tr, td, i;
